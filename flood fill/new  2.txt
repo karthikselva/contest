@@ -1,0 +1,33 @@
+
+int whitener(int i,int j)
+{
+	if ((data[i+1][j] !='0') &&(data[i][j+1] !='0')&&(data[i-1][j] !='0')&&(data[i][j-1] !='0'))
+		return 1;
+	else 
+	{
+		if(data[i+1][j] =='0')
+		{
+			data[i+1][j]='1';
+			whitener(i+1,j);
+		}
+		if(data[i][j+1] =='0')
+		{
+			data[i][j+1]='1';
+			whitener(i,j+1);
+		}
+		if(data[i-1][j] =='0')
+		{
+			data[i-1][j]='1';
+			whitener(i-1,j);
+		}
+		if(data[i][j-1] =='0')
+		{
+			data[i][j-1]='1';
+			whitener(i,j-1);
+		}
+		
+	}
+}
+
+if ((return_data(((i+1)*(W))+j,data) =='1') &&(return_data((i*(W))+j+1,data)=='1')&&(return_data((i-1)*(W)+j,data) =='1')&&(return_data((i*(W))+j-1,data) =='1'))
+		return 1;
